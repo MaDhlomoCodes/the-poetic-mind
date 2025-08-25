@@ -1,35 +1,33 @@
-📖 The Poetic Mind
+# 🖋️ The Poetic Mind (Backend)
 
-A cloud-based web platform that provides a safe and inspiring space for writers — particularly young African poets and creatives — to compose, save, and share poetry and personal reflections.
+The **Poetic Mind** backend is built with **Django Rest Framework** and provides the API layer for a poetry-sharing platform.  
+It enables authentication, poem publishing, comments, likes, and bookmarks — forming the foundation for the frontend.
 
-The platform emphasizes healing, mental health, and cultural storytelling, combining modern backend technologies with a user-centric approach to emotional expression.
+---
 
-🚀 Features
+## 🚀 Features (Backend)
 
-User Authentication – Register & Login (JWT-based)
+- User registration & JWT authentication
+- Poem CRUD (Create, Read, Update, Delete)
+- Commenting system
+- Likes & Bookmarks
+- User Profiles
+- Admin controls for moderation
 
-Poetry Publishing – Create, edit, delete poems with formatting support
+---
 
-Poetry Library – Browse, search, and filter poems by theme
+## 🛠 Tech Stack
 
-Likes & Comments – Engage with poems in real time
+- **Backend**: Django Rest Framework
+- **Database**: PostgreSQL (SQLite for local dev)
+- **Authentication**: JWT (djangorestframework-simplejwt)
+- **Hosting (Planned)**: Render / Heroku
 
-Bookmarking – Save poems to your personal collection
+---
 
-Author Profiles – Showcase bios and published works
+## ⚡ Setup Instructions
 
-Quote Generator – Daily inspirational poetry quotes
-
-Admin Dashboard – Manage users, content, and moderation
-
-Responsive Design – Mobile-friendly with dark/light mode
-
-🛠 Tech Stack
-
-Backend: Django Rest Framework + PostgreSQL
-
-Frontend: React.js + Tailwind CSS
-
-Authentication: JWT (JSON Web Tokens)
-
-Hosting: Vercel (frontend), Render/Heroku (backend)
+### 1. Clone the Repository
+```bash
+git clone https://github.com/MaDhlomoCodes/the-poetic-mind.git
+cd the-poetic-mind/backend
