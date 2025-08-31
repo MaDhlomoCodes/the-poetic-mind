@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Poetic Mind</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>The Poetic Mind</h1>
+    <nav>
+      <button onclick="showPage('login')">Login</button>
+      <button onclick="showPage('register')">Register</button>
+      <button onclick="showPage('poems')">Poems</button>
+      <button onclick="showPage('newPoem')">Publish</button>
+    </nav>
+  </header>
+
+  <!-- LOGIN PAGE -->
+  <section id="login" class="page hidden">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- REGISTER PAGE -->
+  <section id="register" class="page hidden">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" id="regUsername" placeholder="Username" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- POEMS PAGE -->
+  <section id="poems" class="page hidden">
+    <h2>Poetry Library</h2>
+    <div id="poemList"></div>
+  </section>
+
+  <!-- NEW POEM PAGE -->
+  <section id="newPoem" class="page hidden">
+    <h2>Publish a Poem</h2>
+    <form id="newPoemForm">
+      <input type="text" id="poemTitle" placeholder="Title" required />
+      <textarea id="poemContent" placeholder="Write your poem..." required></textarea>
+      <input type="text" id="poemTheme" placeholder="Theme (love, healing...)" required />
+      <button type="submit">Publish</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
