@@ -27,10 +27,7 @@ SECRET_KEY = 'django-insecure-^30pauia)bs$9yj3^wg#e92b4objp72v#%1^%(l%-lt-)lu67p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False 
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-]
+ALLOWED_HOSTS = ['the-poetic-mind.onrender.com']
 
 INSTALLED_APPS = [
     'corsheaders',
@@ -49,6 +46,7 @@ AUTH_USER_MODEL = 'core.User'
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -82,10 +80,11 @@ WSGI_APPLICATION = 'poeticmind.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+      "default": dj_database_url.config(
+        default="postgresql://localhost:5432/mylocaldb",
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL'))
